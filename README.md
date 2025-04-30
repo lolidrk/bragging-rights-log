@@ -1,4 +1,4 @@
-# 🏆 Sibling Code Smackdown: There Can Be Only One (Winner, Me) 🏆
+# 🏆 Sibling Smackdown: There Can Be Only One (Winner, Me) 🏆
 
 Welcome to the digital arena where a classic sibling rivalry gets a modern upgrade, swapping petty arguments for performance benchmarks: **LeetCode.** This is not just code; this is war... The battlefield might be digital now, but the objective remains the same: total domination
 
