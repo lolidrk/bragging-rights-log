@@ -14,7 +14,7 @@ This repository tracks the *real* test of superiority between me and dada. We're
 ## 📊 The Glorious (and Accurate) Scoreboard
 
 Witness the carnage in real-time. Gaze upon the scoreboard and know the truth:
-[Sibling LeetCode Battle Scoreboard](https://bragging-rights-website-d68yjura6-kalyanis-projects-2b66c87a.vercel.app/) **(A Public Service Announcement for my dear brother, Dada:** While you're busy admiring this README, my score is likely climbing. Less reading, more coding! Chop chop!)
+[Sibling LeetCode Battle Scoreboard](https://bragging-rights-website.vercel.app/) **(A Public Service Announcement for my dear brother, Dada:** While you're busy admiring this README, my score is likely climbing. Less reading, more coding! Chop chop!)
 
 ## 🥇 The Arbitrary (But Fiercely Contested) Points System
 
