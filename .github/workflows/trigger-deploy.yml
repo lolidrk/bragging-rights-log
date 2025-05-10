@@ -1,17 +1,35 @@
-# .github/workflows/trigger-deploy.yml
-name: Trigger Website Update
+# .github/workflows/trigger-vercel-deploy.yml
+name: Trigger Vercel Deployment
 on:
   push:
     branches: [ main ]
   
 jobs:
-  trigger:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger website redeploy
-        run: |
-          curl -X POST \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
-          https://api.github.com/repos/lolidrk/bragging-rights-website/dispatches \
-          -d '{"event_type":"log-update"}'
+      - name: Checkout website repository
+        uses: actions/checkout@v3
+        with:
+          repository: lolidrk/bragging-rights-website
+          token: ${{ secrets.PAT_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+        
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
