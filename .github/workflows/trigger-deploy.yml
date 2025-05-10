@@ -1,34 +1,13 @@
-name: Trigger Vercel Deployment
+name: Trigger Vercel Redeploy
+
 on:
   push:
-    branches: [ main ]
-  
+    branches:
+      - main
+
 jobs:
-  deploy:
+  redeploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout website repository
-        uses: actions/checkout@v3
-        with:
-          repository: lolidrk/bragging-rights-website
-          token: ${{ secrets.PAT_TOKEN }}
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-          
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-        
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        
-      - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-        
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Trigger Vercel hook
+        run: curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_U96HCdeSde3vV0mHwiz8PmvnE3bY/vqbdE867gk
