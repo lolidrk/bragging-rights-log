@@ -28,9 +28,7 @@ class Solution(object):
             TraversalNode(root_depth, root)
         )
 
-        elements = {
-            root_depth: root.val
-        }
+        elements = {}
 
         while queue:
             curr = queue.popleft()
