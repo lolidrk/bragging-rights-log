@@ -19,8 +19,8 @@ Witness the carnage in real-time. Gaze upon the scoreboard and know the truth:
 ## 🥇 The Arbitrary (But Fiercely Contested) Points System
 
 -   Easy Problem: 1 point (Basically a participation trophy)
--   Medium Problem: 3 points (Respectable, I guess)
--   Hard Problem: 5 points (Proof of actual brainpower)
+-   Medium Problem: 2 points (Respectable, I guess)
+-   Hard Problem: 3 points (Proof of actual brainpower)
 -   Optimal Solution Bonus: +1 point (Subject to intense peer review, aka arguing if it *really* counts)
 
 ## 🗂️ Organized Chaos: Repository Structure
