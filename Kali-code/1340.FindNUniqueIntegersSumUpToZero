@@ -1,0 +1,13 @@
+class Solution {
+public:
+    vector<int> sumZero(int n) {
+        vector <int> nums;
+        int sum = 0;
+        for ( int i = 1; i < n; i ++){
+            sum += i;
+            nums.push_back(i);
+        }
+        nums.push_back(-sum);
+        return nums;
+    }
+};
