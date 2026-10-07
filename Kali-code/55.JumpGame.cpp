@@ -12,7 +12,7 @@ public:
                 return false;
             horizon = max(horizon, nums[i]+i);
             
-            if ( i >= (nums.size() - 1) )
+            if ( horizon >= (nums.size() - 1) )
                 return true;
         }
         return false;
